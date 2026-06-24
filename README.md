@@ -101,5 +101,4 @@ npm install
 
 # Start the React app:
 npm start
-```-
 
