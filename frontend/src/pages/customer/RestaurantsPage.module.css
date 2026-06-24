@@ -1,0 +1,104 @@
+.page { padding: 48px 0 80px; }
+
+.header { margin-bottom: 32px; }
+.header p { margin-top: 6px; }
+
+.filtersWrap { margin-bottom: 32px; display: flex; flex-direction: column; gap: 16px; }
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  background: white;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 4px 4px 4px 16px;
+  gap: 12px;
+  max-width: 560px;
+  transition: var(--transition);
+}
+.searchBar:focus-within { border-color: var(--brand); box-shadow: 0 0 0 3px rgba(255,69,0,0.1); }
+
+.searchIcon { color: var(--text-muted); flex-shrink: 0; }
+
+.searchInput {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 0.95rem;
+  background: transparent;
+  color: var(--text-primary);
+  padding: 8px 0;
+}
+
+.clearBtn {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  padding: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+}
+.clearBtn:hover { color: var(--error); background: #FEF2F2; }
+
+.cuisineFilters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.cuisineBtn {
+  padding: 8px 18px;
+  border-radius: 100px;
+  border: 1.5px solid var(--border);
+  background: white;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: var(--transition);
+  cursor: pointer;
+}
+.cuisineBtn:hover { border-color: var(--brand); color: var(--brand); }
+.cuisineBtn.active {
+  background: var(--brand);
+  border-color: var(--brand);
+  color: white;
+}
+
+.clearAll {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: var(--brand);
+  background: var(--brand-pale);
+  border: none;
+  padding: 6px 14px;
+  border-radius: 100px;
+  cursor: pointer;
+  font-weight: 500;
+  align-self: flex-start;
+  transition: var(--transition);
+}
+.clearAll:hover { background: var(--brand); color: white; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 48px;
+}
+
+.pageInfo { font-size: 0.9rem; color: var(--text-secondary); font-weight: 500; }
+
+@media (max-width: 1024px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px)  { .grid { grid-template-columns: 1fr; } }
