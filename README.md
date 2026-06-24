@@ -54,27 +54,14 @@ cd quickserve
 code .
 ```
 
----
-
-### Step 2: Set Up MongoDB Atlas
-
-1. Go to https://cloud.mongodb.com → Sign up
-2. Create a **Free Cluster**
-3. Go to **Database Access** → Add a database user with password
-4. Go to **Network Access** → Add IP `0.0.0.0/0` (allow all for dev)
-5. Go to **Connect** → **Connect your application** → Copy the connection string
-6. It looks like: `mongodb+srv://username:password@cluster0.xxxxx.mongodb.net/`
-
----
-
-### Step 3: Configure Backend Environment
+### Step 2: Configure Backend Environment
 
 ```bash
 cd backend
 cp .env.example .env
 ```
 
-### Step 4: Install Backend Dependencies & Seed Database
+### Step 3: Install Backend Dependencies & Seed Database
 
 ```bash
 # Inside /backend folder:
@@ -84,7 +71,7 @@ npm install
 npm run seed
 ```
 
-### Step 6: Configure Frontend Environment
+### Step 4: Configure Frontend Environment
 
 Open a **new terminal**, then:
 
@@ -93,7 +80,7 @@ cd frontend
 cp .env.example .env
 ```
 
-### Step 7: Install Frontend Dependencies & Start
+### Step 5: Install Frontend Dependencies & Start
 
 ```bash
 # Inside /frontend folder:
